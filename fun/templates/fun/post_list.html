@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<title>Funkcja Kwadratowa</title>
+<p><H2>Obliczanie miejsc zerowych funkcji kwadratowej</H2></p>
+<em>chgfg</em>
+</HEAD>
+
+<script language = "JavaScript">
+//document.write ("<H2>Obliczanie miejsc zerowych funkcji kwadratowej</H2>");
+var A = prompt ("Podaj wartosc A rownania Ax^2+Bx+C=0 ", "");
+var B = prompt ("Podaj wartosc B rownania Ax^2+Bx+C=0 ", "");
+var C = prompt ("Podaj wartosc C rownania Ax^2+Bx+C=0 ", "");
+
+var delta =  B*B-4*A*C;
+
+if (A == null || B == null || C == null || isNaN(A) || isNaN(B) || isNaN(C))
+{
+	document.write ("<b>Brakuje danych lub wpisales litere zamiast liczby <br> Odswiez strone i wpisz ponownie.</b>");
+}
+else
+{
+	if (A == 0)
+	{
+		document.write ("<b>To nie jest rownanie kwadratowe! Odswiez  strone i wpisz ponownie.</b>");
+	}
+	else
+	{
+		document.write("Delta = ", delta);	
+		document.write ("<br>");
+		if (delta < 0)
+		{
+  			document.write ("Rownanie nie ma rozwiazan");
+		}
+ 		else
+ 		{
+  			if (delta == 0)
+  			{
+      				document.write ("Rozwiazanie ma liczbe x= ", -B/(2*A) )
+  			}	
+  			else
+   			{ 
+     				document.write ("<b> Rozwiazaniem sa liczby </b><br> x1 = ", parseFloat(( -B + Math.sqrt(delta))/(2*A) ).toFixed(2));
+     				document.write ("<br> x2= ", parseFloat(( -B - Math.sqrt(delta))/(2*A) ).toFixed(2));
+   			}
+		}
+	}
+}
+
+
+</SCRIPT>
+
+<BODY>
+<p><H3>Adriana Madej</H3></p>
+
+</BODY>
+</HTML>  
